@@ -1,0 +1,173 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    includehead=true,
+    headsep=3.5mm,
+    top=10mm,
+    left=20mm,
+    right=20mm,
+    bottom=20mm
+}
+
+\usepackage[russian]{babel}
+\sloppy
+    
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancypagestyle{fancy}{
+	\fancyhead[L]{\textit{Самостоятельная работа 6}}
+	\fancyhead[R]{\textit{Вариант 3}}
+	\fancyfoot[L]{\thepage}
+	\fancyfoot[R]{\textit{курс "основы статистических наблюдений", 2023}}
+	\renewcommand{\headrulewidth}{0.20ex}
+}
+\pagestyle{fancy}
+        
+\usepackage{fontspec-xetex}
+\setmainfont{Open Sans}
+    
+\usepackage{booktabs}
+    
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont[Scale=1.2]{Cambria Math}
+    
+\usepackage{caption}
+\captionsetup[table]{name=Таблица, aboveskip=3pt, labelfont={it}, font={it}, justification=raggedleft, singlelinecheck=off}
+\captionsetup[figure]{labelformat=empty, margin=0pt, skip = -12pt}
+
+\setlength\parindent{0pt}
+
+\usepackage{booktabs}
+\setlength\heavyrulewidth{0.20ex}
+\setlength\cmidrulewidth{0.10ex}
+\setlength\lightrulewidth{0.10ex}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\def\tabularxcolumn#1{m{#1}}
+
+\usepackage{svg}
+
+\usepackage{tcolorbox}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage{makecell}
+
+\usepackage{underscore}
+
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\begin{document}
+
+
+\mbox{}
+
+\vspace{-36pt}
+
+\begin{center}
+	\begin{tcolorbox}[colback=white, boxrule=0.20ex, sharp corners = all, height=25pt, colframe=black, valign=top]
+		\begin{center}
+			Фамилия Имя:\hspace{1.5pt}\rule{190pt}{0pt}\hspace{50pt}Группа:\hspace{1.5pt}\rule{60pt}{0pt}
+		\end{center}
+	\end{tcolorbox}
+\end{center}
+\vspace{3pt}
+
+\textbf{Задача 1 (2 б.).} По таблице \ref{task3}, в которой отражена динамика структуры персонала предприятия, рассчитайте:
+\begin{enumerate}[leftmargin=40pt]
+\item Линейных коэффициент <<абсолютных>> структурных сдвигов за период 2012--2018,
+\item Квадратический коэффициент <<абсолютных>> структурных сдвигов за период 2012--2015.\medskip
+\end{enumerate}
+
+Ответ округлите до двух знаков после запятой. Сформулируйте выводы\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.8\textwidth}{rYYY}
+\toprule
+ & \textbf{2012, \%} & \textbf{2015, \%} & \textbf{2018, \%} \\
+\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+Менеджеры & 8.2 & 1.3 & 2.5 \\
+
+Высококвалифицированные кадры & 21.3 & 31.1 & 4.1 \\
+
+Рабочие & 70.5 & 67.6 & 93.4 \\
+\bottomrule
+\end{tabularx}
+\label{task3}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 2 (2 б.).} Пользуясь данными из таблицы \ref{task7}, в которой представлено распределение населения по совокупному доходу, рассчитайте и проинтерпретируйте коэффициент Лоренса. Ответ округлите до четырёх знаков после запятой\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.8\textwidth}{YYYYY}
+\toprule
+\small\textbf{Доля населения, ($\symbfit{d_x}$)} & \small\textbf{Доля в совокупном доходе, ($\symbfit{d_y}$)} & $\symbfit{d_y^H}$ & $\symbfit{d_x\cdot d_y}$ & $\symbfit{d_x\cdot d_y^H}$ \\
+\midrule
+0.25 & 0.1 & 0.1 & 0.025 & 0.025 \\
+
+0.25 & 0.17 & 0.27 & 0.0425 & 0.0675 \\
+
+0.25 & 0.17 & 0.44 & 0.0425 & 0.11 \\
+
+0.25 & 0.56 & 1.0 & 0.14 & 0.25 \\
+\addlinespace
+\textit{Всего:} & -- & -- & \textit{0.25} & \textit{0.4525} \\
+\bottomrule
+\end{tabularx}
+\label{task7}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 3 (4 б.).} В таблице \ref{task6} представлено распределение населений стран А и Б по их классовой принадлежности. Пользуясь этими данными, рассчитайте и проинтерпретируйте индекс Рябцева. Ответ округлите до четырёх знаков после запятой.\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.7\textwidth}{rYY}
+\toprule
+ & \textbf{Страна А, \%} & \textbf{Страна Б, \%} \\
+\cmidrule(lr){2-2}\cmidrule(lr){3-3}
+Высший класс & 2 & 9 \\
+
+Средний класс & 21 & 8 \\
+
+Низший класс & 77 & 83 \\
+\bottomrule
+\end{tabularx}
+\label{task6}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 4 (2 б.).} В таблице \ref{task8} представлены данные о численности населения трёх крупнейших городов некоторого региона. Рассчитайте обобщающий показатель централизации (индекс Герфиндаля-Хиршмана) и проинтерпретируйте результат. Ответ округлите до четырёх знаков после запятой\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.4\textwidth}{YY}
+\toprule
+\textbf{Город} & \textbf{Численность населения, тыс. чел.} \\
+\midrule
+А & 1591 \\
+
+Б & 2638 \\
+
+В & 633 \\
+\addlinespace
+\textit{Всего} & \textit{4862} \\
+\bottomrule
+\end{tabularx}
+\label{task8}
+\end{minipage} \\[35pt]
+
+\end{document}

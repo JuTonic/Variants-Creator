@@ -1,0 +1,173 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    includehead=true,
+    headsep=3.5mm,
+    top=10mm,
+    left=20mm,
+    right=20mm,
+    bottom=20mm
+}
+
+\usepackage[russian]{babel}
+\sloppy
+    
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancypagestyle{fancy}{
+	\fancyhead[L]{\textit{Самостоятельная работа 6}}
+	\fancyhead[R]{\textit{Вариант 24}}
+	\fancyfoot[L]{\thepage}
+	\fancyfoot[R]{\textit{курс "основы статистических наблюдений", 2023}}
+	\renewcommand{\headrulewidth}{0.20ex}
+}
+\pagestyle{fancy}
+        
+\usepackage{fontspec-xetex}
+\setmainfont{Open Sans}
+    
+\usepackage{booktabs}
+    
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont[Scale=1.2]{Cambria Math}
+    
+\usepackage{caption}
+\captionsetup[table]{name=Таблица, aboveskip=3pt, labelfont={it}, font={it}, justification=raggedleft, singlelinecheck=off}
+\captionsetup[figure]{labelformat=empty, margin=0pt, skip = -12pt}
+
+\setlength\parindent{0pt}
+
+\usepackage{booktabs}
+\setlength\heavyrulewidth{0.20ex}
+\setlength\cmidrulewidth{0.10ex}
+\setlength\lightrulewidth{0.10ex}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\def\tabularxcolumn#1{m{#1}}
+
+\usepackage{svg}
+
+\usepackage{tcolorbox}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage{makecell}
+
+\usepackage{underscore}
+
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\begin{document}
+
+
+\mbox{}
+
+\vspace{-36pt}
+
+\begin{center}
+	\begin{tcolorbox}[colback=white, boxrule=0.20ex, sharp corners = all, height=25pt, colframe=black, valign=top]
+		\begin{center}
+			Фамилия Имя:\hspace{1.5pt}\rule{190pt}{0pt}\hspace{50pt}Группа:\hspace{1.5pt}\rule{60pt}{0pt}
+		\end{center}
+	\end{tcolorbox}
+\end{center}
+\vspace{3pt}
+
+\textbf{Задача 1 (2 б.).} По данным о динамике структуры доходов бюджета (таблица \ref{task1}), рассчитайте:
+\begin{enumerate}[leftmargin=40pt]
+\item Линейный коэффициент <<абсолютных>> структурных сдвигов за период 2021--2023,
+\item Квадратический коэффициент <<абсолютных>> структурных сдвигов за период 2019--2021.\medskip
+\end{enumerate}
+
+Ответ округлите до двух знаков после запятой. Сформулируйе выводы.\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.8\textwidth}{rYYY}
+\toprule
+ & \textbf{2019, \%} & \textbf{2021, \%} & \textbf{2023, \%} \\
+\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+Нефтегазовые доходы & 42.2 & 43.2 & 48.1 \\
+
+Налоги на прибыль и доходы & 49.0 & 49.1 & 48.0 \\
+
+Прочее & 8.8 & 7.7 & 3.9 \\
+\bottomrule
+\end{tabularx}
+\label{task1}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 2 (4 б.).} В таблице \ref{task5} представлена структура предпочитаемых населением регионов А и Б видов транспорта. Пользуясь этими данными, рассчитайте и проинтерпретируйте индекс Салаи. Ответ округлите до четырёх знаков после запятой.\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.7\textwidth}{rYY}
+\toprule
+ & \textbf{Регион А, \%} & \textbf{Регион Б, \%} \\
+\cmidrule(lr){2-2}\cmidrule(lr){3-3}
+Личный автомобиль & 49 & 46 \\
+
+Общественный транспорт & 47 & 47 \\
+
+Другое (такси, не пользуюсь транспортом...) & 4 & 7 \\
+\bottomrule
+\end{tabularx}
+\label{task5}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 3 (2 б.).} В таблице \ref{task9} представлены данные о количестве патентов, зарегистрированных в странах А, Б и В. Рассчитайте обобщающий показатель централизации (индекс Герфиндаля-Хиршмана) и проинтерпретируйте результат. Ответ округлите до четырёх знаков после запятой\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.4\textwidth}{YY}
+\toprule
+\textbf{Страна} & \textbf{Количество патентов, шт.} \\
+\midrule
+А & 2723 \\
+
+Б & 1589 \\
+
+В & 1955 \\
+\addlinespace
+\textit{Всего} & \textit{6267} \\
+\bottomrule
+\end{tabularx}
+\label{task9}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 4 (2 б.).} Пользуясь данными из таблицы \ref{task7}, в которой представлено распределение населения по совокупному доходу, рассчитайте и проинтерпретируйте индекс Джини. Ответ округлите до четырёх знаков после запятой\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.8\textwidth}{YYYYY}
+\toprule
+\small\textbf{Доля населения, ($\symbfit{d_x}$)} & \small\textbf{Доля в совокупном доходе, ($\symbfit{d_y}$)} & $\symbfit{d_y^H}$ & $\symbfit{d_x\cdot d_y}$ & $\symbfit{d_x\cdot d_y^H}$ \\
+\midrule
+0.25 & 0.04 & 0.04 & 0.01 & 0.01 \\
+
+0.25 & 0.05 & 0.09 & 0.0125 & 0.0225 \\
+
+0.25 & 0.15 & 0.24 & 0.0375 & 0.06 \\
+
+0.25 & 0.76 & 1.0 & 0.19 & 0.25 \\
+\addlinespace
+\textit{Всего:} & -- & -- & \textit{0.25} & \textit{0.3425} \\
+\bottomrule
+\end{tabularx}
+\label{task7}
+\end{minipage} \\[35pt]
+
+\end{document}

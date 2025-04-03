@@ -1,0 +1,146 @@
+[document]
+preambule = """\\documentclass{article}
+
+\\usepackage{geometry}
+\\geometry{
+    a4paper,
+    includehead=true,
+    headsep=3.5mm,
+    top=10mm,
+    left=20mm,
+    right=20mm,
+    bottom=20mm
+}
+
+\\usepackage[russian]{babel}
+\\sloppy
+    
+\\usepackage{fancyhdr}
+\\fancyhf{}
+\\fancypagestyle{fancy}{
+	\\fancyhead[L]{\\textit{[`quiz_name`]}}
+	\\fancyhead[R]{\\textit{[`variant`]}}
+	\\fancyfoot[L]{\\thepage}
+	\\fancyfoot[R]{\\textit{курс "основы статистических наблюдений", 2023}}
+	\\renewcommand{\\headrulewidth}{0.20ex}
+}
+\\pagestyle{fancy}
+        
+\\usepackage{fontspec-xetex}
+\\setmainfont{Open Sans}
+    
+\\usepackage{booktabs}
+    
+\\usepackage{amsmath}
+\\usepackage{unicode-math}
+\\setmathfont[Scale=1.2]{Cambria Math}
+    
+\\usepackage{caption}
+\\captionsetup[table]{name=Таблица, aboveskip=3pt, labelfont={it}, font={it}, justification=raggedleft, singlelinecheck=off}
+\\captionsetup[figure]{labelformat=empty, margin=0pt, skip = -12pt}
+
+\\setlength\\parindent{0pt}
+
+\\usepackage{booktabs}
+\\setlength\\heavyrulewidth{0.20ex}
+\\setlength\\cmidrulewidth{0.10ex}
+\\setlength\\lightrulewidth{0.10ex}
+
+\\usepackage{tabularx}
+\\newcolumntype{Y}{>{\\centering\\arraybackslash}X}
+\\def\\tabularxcolumn#1{m{#1}}
+
+\\usepackage{svg}
+
+\\usepackage{tcolorbox}
+
+\\renewcommand{\\baselinestretch}{1.5}
+
+\\usepackage{makecell}
+
+\\usepackage{underscore}
+
+\\usepackage{multirow}
+
+\\usepackage{enumitem}
+\\setlist{nolistsep}
+
+\\renewcommand{\\theenumi}{\\alph{enumi}}
+
+\\begin{document}\n\n
+\\mbox{}
+
+\\vspace{-36pt}
+
+\\begin{center}
+	\\begin{tcolorbox}[colback=white, boxrule=0.20ex, sharp corners = all, height=25pt, colframe=black, valign=top]
+		\\begin{center}
+			Фамилия Имя:\\hspace{1.5pt}\\rule{190pt}{0pt}\\hspace{50pt}Группа:\\hspace{1.5pt}\\rule{60pt}{0pt}
+		\\end{center}
+	\\end{tcolorbox}
+\\end{center}
+\\vspace{3pt}\n\n"""
+
+[table]
+top = """\\begin{minipage}{\\textwidth}
+\\captionof{table}{[`caption`]}
+\\centering
+\\begin{tabularx}{[`table_width`]}{[`placement`]}
+\\toprule\n"""
+
+bottom = """\\bottomrule
+\\end{tabularx}
+\\label{[`label`]}
+\\end{minipage} \\\\[[`space_after_table`]]\n\n"""
+
+top1 = """\\begin{minipage}{\\textwidth}
+\\captionof{table}{}
+\\footnotesize
+\\centering
+\\begin{tabularx}{[`table_width`]}{[`placement`]}
+\\toprule\n"""
+
+[table.2x2]
+table = """\\begin{minipage}{\\textwidth}
+	\\centering
+	\\aboverulesep=0ex
+	\\belowrulesep=0ex
+	\\captionof{table}{}
+	\\begin{tabularx}{[`width`]}{rrYYr}
+		& & \\multicolumn{2}{c}{[`Y_name`]} & \\\\
+		\\cmidrule(l{-0.4pt}){3-4}
+		& \\multicolumn{1}{c|}{} & [`Y1`] & [`Y2`] & \\textit{Итого} \\\\
+		\\cmidrule{2-2}
+		\\multirow{2}*{\\textbf{[`X_name`]}} & [`X1`] & [`n11`] & [`n12`] & \\textit{[`n13`]} \\\\
+	 	& [`X2`] & [`n21`] & [`n22`] & \\textit{[`n23`]} \\\\
+		\\addlinespace[1ex]
+		& \\textit{Итого} & \\textit{[`n31`]} & \\textit{[`n32`]} & \\textit{[`n33`]} \\\\
+	\\end{tabularx}
+  \\label{[`label`]}
+\\end{minipage} \\\\[35pt]"""
+
+[table.2x4]
+table = """\\begin{minipage}{\\textwidth}
+	\\aboverulesep=0ex
+	\\belowrulesep=0ex
+	\\captionof{table}{}
+	\\centering
+	\\begin{tabularx}{[`width`]\\textwidth}{rcYYYYr}
+		& & \\multicolumn{4}{c}{Y} & \\\\
+		\\cmidrule(l{-0.4pt}){3-6}
+		& \\multicolumn{1}{c|}{} & [`Y1`] & [`Y2`] & [`Y3`] & [`Y4`] & Итого \\\\
+		\\cmidrule{2-2}
+		\\multirow{2}*{X} & X1 & [`n11`] & [`n12`] & [`n13`] & [`n13`] & 301 \\\\
+		& X2 & 62 & 67 & 69 & 24 & 222 \\\\
+		& Итого & 146 & 151 & 163 & 63 & 523 \\\\
+	\\end{tabularx}
+	\\label{[`label`]}
+\\end{minipage} \\[35pt]"""
+
+[figure]
+code = """\\begin{minipage}{\\textwidth}
+\\captionof{figure}{}
+\\label{[`label`]}
+\\centering
+\\includesvg[width=[`width`]]{[`filename`]}
+\\end{minipage}"""

@@ -1,0 +1,6 @@
+[table]
+placement = 'Y'
+midrule = '\midrule'
+space_after_table = '35pt'
+width = '0.8\textwidth'
+table_enviroment = 'tabularx'

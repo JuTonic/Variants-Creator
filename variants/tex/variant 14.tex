@@ -1,0 +1,173 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    includehead=true,
+    headsep=3.5mm,
+    top=10mm,
+    left=20mm,
+    right=20mm,
+    bottom=20mm
+}
+
+\usepackage[russian]{babel}
+\sloppy
+    
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancypagestyle{fancy}{
+	\fancyhead[L]{\textit{Самостоятельная работа 6}}
+	\fancyhead[R]{\textit{Вариант 14}}
+	\fancyfoot[L]{\thepage}
+	\fancyfoot[R]{\textit{курс "основы статистических наблюдений", 2023}}
+	\renewcommand{\headrulewidth}{0.20ex}
+}
+\pagestyle{fancy}
+        
+\usepackage{fontspec-xetex}
+\setmainfont{Open Sans}
+    
+\usepackage{booktabs}
+    
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont[Scale=1.2]{Cambria Math}
+    
+\usepackage{caption}
+\captionsetup[table]{name=Таблица, aboveskip=3pt, labelfont={it}, font={it}, justification=raggedleft, singlelinecheck=off}
+\captionsetup[figure]{labelformat=empty, margin=0pt, skip = -12pt}
+
+\setlength\parindent{0pt}
+
+\usepackage{booktabs}
+\setlength\heavyrulewidth{0.20ex}
+\setlength\cmidrulewidth{0.10ex}
+\setlength\lightrulewidth{0.10ex}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\def\tabularxcolumn#1{m{#1}}
+
+\usepackage{svg}
+
+\usepackage{tcolorbox}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage{makecell}
+
+\usepackage{underscore}
+
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+\begin{document}
+
+
+\mbox{}
+
+\vspace{-36pt}
+
+\begin{center}
+	\begin{tcolorbox}[colback=white, boxrule=0.20ex, sharp corners = all, height=25pt, colframe=black, valign=top]
+		\begin{center}
+			Фамилия Имя:\hspace{1.5pt}\rule{190pt}{0pt}\hspace{50pt}Группа:\hspace{1.5pt}\rule{60pt}{0pt}
+		\end{center}
+	\end{tcolorbox}
+\end{center}
+\vspace{3pt}
+
+\textbf{Задача 1 (2 б.).} Пользуясь данными из таблицы \ref{task7}, в которой представлено распределение населения по совокупному доходу, рассчитайте и проинтерпретируйте индекс Джини. Ответ округлите до четырёх знаков после запятой\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.8\textwidth}{YYYYY}
+\toprule
+\small\textbf{Доля населения, ($\symbfit{d_x}$)} & \small\textbf{Доля в совокупном доходе, ($\symbfit{d_y}$)} & $\symbfit{d_y^H}$ & $\symbfit{d_x\cdot d_y}$ & $\symbfit{d_x\cdot d_y^H}$ \\
+\midrule
+0.25 & 0.02 & 0.02 & 0.005 & 0.005 \\
+
+0.25 & 0.11 & 0.13 & 0.0275 & 0.0325 \\
+
+0.25 & 0.17 & 0.3 & 0.0425 & 0.075 \\
+
+0.25 & 0.7 & 1.0 & 0.175 & 0.25 \\
+\addlinespace
+\textit{Всего:} & -- & -- & \textit{0.25} & \textit{0.3625} \\
+\bottomrule
+\end{tabularx}
+\label{task7}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 2 (2 б.).} По таблице \ref{task2}, в которой отражена динамика структуры предприятий города А по их размеру, рассчитайте:
+\begin{enumerate}[leftmargin=40pt]
+\item Линейный коэффициент <<абсолютных>> структурных сдвигов за период 2018--2019,
+\item Квадратический коэффициент <<относительных>> структурных сдвигов за период 2019--2020.\medskip
+\end{enumerate}
+
+Ответ округлите до двух знаков после запятой. Сформулируйте выводы.\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.8\textwidth}{rYYY}
+\toprule
+ & \textbf{2018, \%} & \textbf{2019, \%} & \textbf{2020, \%} \\
+\cmidrule(lr){2-2}\cmidrule(lr){3-3}\cmidrule(lr){4-4}
+Крупные предприятия & 3.9 & 1.4 & 7.6 \\
+
+Средние предприятия & 7.4 & 48.2 & 26.9 \\
+
+Малые предприятия & 88.7 & 50.4 & 65.5 \\
+\bottomrule
+\end{tabularx}
+\label{task2}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 3 (2 б.).} В таблице \ref{task9} представлены данные о количестве патентов, зарегистрированных в странах А, Б и В. Рассчитайте обобщающий показатель централизации (индекс Герфиндаля-Хиршмана) и проинтерпретируйте результат. Ответ округлите до четырёх знаков после запятой\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.4\textwidth}{YY}
+\toprule
+\textbf{Страна} & \textbf{Количество патентов, шт.} \\
+\midrule
+А & 2722 \\
+
+Б & 964 \\
+
+В & 1089 \\
+\addlinespace
+\textit{Всего} & \textit{4775} \\
+\bottomrule
+\end{tabularx}
+\label{task9}
+\end{minipage} \\[35pt]
+
+\textbf{Задача 4 (4 б.).} В таблице \ref{task4} представлена структура потребления товаров разных категорий для населений городов А и Б. Пользуясь этими данными, рассчитайте и проинтерпретируйте индекс Салаи. Ответ округлите до четырёх знаков после запятой.\\
+
+\begin{minipage}{\textwidth}
+\captionof{table}{}
+\centering
+\begin{tabularx}{0.7\textwidth}{rYY}
+\toprule
+ & \textbf{Город А, \%} & \textbf{Город Б, \%} \\
+\cmidrule(lr){2-2}\cmidrule(lr){3-3}
+Предметы роскоши & 41 & 3 \\
+
+Нормальные блага & 42 & 37 \\
+
+Товары первой необходимости & 17 & 60 \\
+\bottomrule
+\end{tabularx}
+\label{task4}
+\end{minipage} \\[35pt]
+
+\end{document}

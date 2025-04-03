@@ -1,0 +1,264 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    includehead=true,
+    headsep=3.5mm,
+    top=10mm,
+    left=20mm,
+    right=20mm,
+    bottom=20mm
+}
+
+\usepackage[russian]{babel}
+\sloppy
+    
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancypagestyle{fancy}{
+	\fancyhead[L]{\textit{Самостоятельная работа 4}}
+	\fancyhead[R]{\textit{Ответы}}
+	\fancyfoot[L]{\thepage}
+	\fancyfoot[R]{\textit{курс "основы статистических наблюдений", 2023}}
+	\renewcommand{\headrulewidth}{0.20ex}
+}
+\pagestyle{fancy}
+        
+\usepackage{fontspec-xetex}
+\setmainfont{OpenSans}[
+  Path    = D:/local/LaTeX/fonts/ ,
+  Extension  = .ttf ,
+  UprightFont  = *-Regular ,
+  BoldFont  = *-Bold ,
+  ItalicFont  = *-Italic ,
+  BoldItalicFont = *-BoldItalic ]
+    
+\usepackage{booktabs}
+    
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont[Scale=1.2]{Cambria Math}
+    
+\usepackage{caption}
+\captionsetup[table]{name=Таблица, aboveskip=3pt, labelfont={it}, font={it}}
+\captionsetup[figure]{labelformat=empty, margin=0pt, skip = -12pt}
+
+\setlength\parindent{0pt}
+
+\usepackage{booktabs}
+\setlength\heavyrulewidth{0.20ex}
+\setlength\cmidrulewidth{0.10ex}
+\setlength\lightrulewidth{0.10ex}
+
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\def\tabularxcolumn#1{m{#1}}
+
+\usepackage{svg}
+
+\usepackage{tcolorbox}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\usepackage{makecell}
+
+\usepackage{underscore}
+
+\begin{document}
+
+
+\mbox{}
+
+\vspace{-36pt}
+
+\begin{center}
+	\begin{tcolorbox}[colback=white, boxrule=0.20ex, sharp corners = all, height=25pt, colframe=black, valign=top]
+		\begin{center}
+			Фамилия Имя:\hspace{1.5pt}\rule{190pt}{0pt}\hspace{50pt}Группа:\hspace{1.5pt}\rule{60pt}{0pt}
+		\end{center}
+	\end{tcolorbox}
+\end{center}
+\vspace{3pt}
+
+\textbf{Вариант 1}
+\begin{enumerate}
+\item $y = 52.9+2.96\cdot x$. При увеличении $x$ на единицу, $y$ изменится на 2.96
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x_2 = a * x_1 ^ 2$  
+\item $S = 11.83$
+\item $\rho \approx 0.8$, $\rho_{exact} = 0.7994$. Положительная сильная линейная связь
+\item $\varepsilon = 2.4$. При увеличении цены маркера на 1\%, срок его службы вырастет на 2.4\%
+\end{enumerate}
+
+\textbf{Вариант 2}
+\begin{enumerate}
+\item $S = 10.2$
+\item $\varepsilon = 1.5$. При увеличении $x$ на 1\%, $y$ изменится на 1.5\%
+\item Положительная умеренная (средняя) линейная. $\symit{\rho_{exact} = 0.5892}$
+\item $\rho \approx -0.1$, $\rho_{exact} = -0.1003$. Линейная связь отсутствует
+\item $y = 74.5+-4.0\cdot x$. При увеличении максимальной частоты процессора на 1 ГГц, скорость выполнения программы изменится на -4.0
+\end{enumerate}
+
+\textbf{Вариант 3}
+\begin{enumerate}
+\item $\varepsilon = 0.8$. При увеличении цены маркера на 1\%, срок его службы вырастет на 0.8\%
+\item $y = 70.55+-0.11\cdot x$. Каждая дополнительная выкуренная сигарета изменяет среднее количество лет, которое человек проживёт на -0.11
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x ^ 2 + y ^ 2 = r^2$
+\item $S = 11.36$
+\item $\rho \approx -0.32$, $\rho_{exact} = -0.3138$. Отрицательная умеренная (средняя) линейная связь
+\end{enumerate}
+
+\textbf{Вариант 4}
+\begin{enumerate}
+\item $S = 40.24$
+\item $\rho \approx -0.8$, $\rho_{exact} = -0.7428$. Отрицательная сильная линейная связь
+\item $\varepsilon = 2.1$. При увеличении $x$ на 1\%, $y$ изменится на 2.1\%
+\item $y = 0.05 + -0.198\cdot x$. При увеличении ВВП страны на 1 млрд. долларов, ИЧР в среднем вырастёт на -0.198
+\item Лаборант был неправ. Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $y = cos(x)$
+\end{enumerate}
+
+\textbf{Вариант 5}
+\begin{enumerate}
+\item $\varepsilon = 0.4$. При увеличении цены маркера на 1\%, срок его службы вырастет на 0.4\%
+\item Отрицательная умеренная (средняя) линейная связь. $\symit{\rho_{exact} = -0.5162}$
+\item $y = 0.052 + -0.0552\cdot x$. При увеличении ВВП страны на 1 млрд. долларов, ИЧР в среднем вырастёт на -0.0552
+\item $\rho \approx -0.1$, $\rho_{exact} = -0.0995$. Линейная связь отсутствует
+\item $S = 39.59$
+\end{enumerate}
+
+\textbf{Вариант 6}
+\begin{enumerate}
+\item $\rho \approx -0.8$, $\rho_{exact} = -0.8729$. Отрицательная сильная линейная связь
+\item $\varepsilon = 3.1$. При увеличении $x$ на 1\%, $y$ изменится на 3.1\%
+\item $y = 52.62+2.97\cdot x$. При увеличении $x$ на единицу, $y$ изменится на 2.97
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x ^ 2 + y ^ 2 = r^2$
+\item $S = 16.58$
+\end{enumerate}
+
+\textbf{Вариант 7}
+\begin{enumerate}
+\item $\rho \approx 0.6$, $\rho_{exact} = 0.5993$. Положительная умеренная (средняя) линейная
+\item $y = 60.0+-2.0\cdot x$. При увеличении максимальной частоты процессора на 1 ГГц, скорость выполнения программы изменится на -2.0
+\item Лаборант был неправ. Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $y = cos(x)$
+\item $S = 10.34$
+\item $\varepsilon = 1.1$. При увеличении цены маркера на 1\%, срок его службы вырастет на 1.1\%
+\end{enumerate}
+
+\textbf{Вариант 8}
+\begin{enumerate}
+\item $y = 71.06+-0.09\cdot x$. Каждая дополнительная выкуренная сигарета изменяет среднее количество лет, которое человек проживёт на -0.09
+\item $S = 10.2$
+\item $\varepsilon = 1.2$. При увеличении $x$ на 1\%, $y$ изменится на 1.2\%
+\item $\rho \approx -0.5$, $\rho_{exact} = -0.4938$. Отрицательная умеренная (средняя) линейная связь
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x_2 = a * x_1 ^ 2$  
+\end{enumerate}
+
+\textbf{Вариант 9}
+\begin{enumerate}
+\item $\rho \approx -0.8$, $\rho_{exact} = -0.8165$. Отрицательная сильная линейная связь
+\item Положительная умеренная (средняя) линейная. $\symit{\rho_{exact} = 0.6208}$
+\item $y = 55.8+-1.0\cdot x$. При увеличении максимальной частоты процессора на 1 ГГц, скорость выполнения программы изменится на -1.0
+\item $\varepsilon = 1.5$. При увеличении цены маркера на 1\%, срок его службы вырастет на 1.5\%
+\item $S = 35.61$
+\end{enumerate}
+
+\textbf{Вариант 10}
+\begin{enumerate}
+\item $\rho \approx 0.6$, $\rho_{exact} = 0.5987$. Положительная умеренная (средняя) линейная
+\item $S = 7.35$
+\item $y = 72.755+-0.155\cdot x$. Каждая дополнительная выкуренная сигарета изменяет среднее количество лет, которое человек проживёт на -0.155
+\item $\varepsilon = 1.1$. При увеличении $x$ на 1\%, $y$ изменится на 1.1\%
+\item Лаборант был неправ. Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $y = cos(x)$
+\end{enumerate}
+
+\textbf{Вариант 11}
+\begin{enumerate}
+\item $\rho \approx -0.4$, $\rho_{exact} = -0.3973$. Отрицательная умеренная (средняя) линейная связь
+\item $\varepsilon = 0.8$. При увеличении цены маркера на 1\%, срок его службы вырастет на 0.8\%
+\item $S = 9.22$
+\item $y = 0.016 + -0.1053\cdot x$. При увеличении ВВП страны на 1 млрд. долларов, ИЧР в среднем вырастёт на -0.1053
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x_2 = a * x_1 ^ 2$  
+\end{enumerate}
+
+\textbf{Вариант 12}
+\begin{enumerate}
+\item $\rho \approx 0.2$, $\rho_{exact} = 0.1995$. Положительная слабая линейная связь
+\item $\varepsilon = 2.2$. При увеличении $x$ на 1\%, $y$ изменится на 2.2\%
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x_2 = a * x_1 ^ 2$  
+\item $y = 47.86+3.04\cdot x$. При увеличении $x$ на единицу, $y$ изменится на 3.04
+\item $S = 6.48$
+\end{enumerate}
+
+\textbf{Вариант 13}
+\begin{enumerate}
+\item $y = 0.1696 + -0.0464\cdot x$. При увеличении ВВП страны на 1 млрд. долларов, ИЧР в среднем вырастёт на -0.0464
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x ^ 2 + y ^ 2 = r^2$
+\item $\rho \approx -0.4$, $\rho_{exact} = -0.4364$. Отрицательная умеренная (средняя) линейная связь
+\item $S = 9.75$
+\item $\varepsilon = 0.6$. При увеличении цены маркера на 1\%, срок его службы вырастет на 0.6\%
+\end{enumerate}
+
+\textbf{Вариант 14}
+\begin{enumerate}
+\item $S = 11.22$
+\item $\varepsilon = 2.6$. При увеличении $x$ на 1\%, $y$ изменится на 2.6\%
+\item $y = 65.2+-2.5\cdot x$. При увеличении максимальной частоты процессора на 1 ГГц, скорость выполнения программы изменится на -2.5
+\item Лаборант был неправ. Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $y = cos(x)$
+\item $\rho \approx -0.8$, $\rho_{exact} = -0.7845$. Отрицательная сильная линейная связь
+\end{enumerate}
+
+\textbf{Вариант 15}
+\begin{enumerate}
+\item $\varepsilon = 3.1$. При увеличении $x$ на 1\%, $y$ изменится на 3.1\%
+\item $y = 51.3+3.0\cdot x$. При увеличении $x$ на единицу, $y$ изменится на 3.0
+\item $\rho \approx 0.75$, $\rho_{exact} = 0.7493$. Положительная сильная линейная связь
+\item Линейная связь отсутствует. $\symit{\rho_{exact} = 0.0317}$
+\item $S = 10.3$
+\end{enumerate}
+
+\textbf{Вариант 16}
+\begin{enumerate}
+\item $S = 13.23$
+\item $\varepsilon = 0.9$. При увеличении цены маркера на 1\%, срок его службы вырастет на 0.9\%
+\item $\rho \approx -0.32$, $\rho_{exact} = -0.3184$. Отрицательная умеренная (средняя) линейная связь
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x ^ 2 + y ^ 2 = r^2$
+\item $y = 49.54+3.02\cdot x$. При увеличении $x$ на единицу, $y$ изменится на 3.02
+\end{enumerate}
+
+\textbf{Вариант 17}
+\begin{enumerate}
+\item $y = 69.625+-0.0625\cdot x$. Каждая дополнительная выкуренная сигарета изменяет среднее количество лет, которое человек проживёт на -0.0625
+\item $S = 11.31$
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x_2 = a * x_1 ^ 2$  
+\item $\rho \approx -0.8$, $\rho_{exact} = -0.8165$. Отрицательная сильная линейная связь
+\item $\varepsilon = 0.5$. При увеличении цены маркера на 1\%, срок его службы вырастет на 0.5\%
+\end{enumerate}
+
+\textbf{Вариант 18}
+\begin{enumerate}
+\item Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $x ^ 2 + y ^ 2 = r^2$
+\item $\rho \approx 0.25$, $\rho_{exact} = 0.2483$. Положительная слабая линейная связь
+\item $\varepsilon = 0.6$. При увеличении $x$ на 1\%, $y$ изменится на 0.6\%
+\item $S = 44.53$
+\item $y = 72.3+-0.06\cdot x$. Каждая дополнительная выкуренная сигарета изменяет среднее количество лет, которое человек проживёт на -0.06
+\end{enumerate}
+
+\textbf{Вариант 19}
+\begin{enumerate}
+\item $S = 14.56$
+\item $y = 0.1584 + -0.048\cdot x$. При увеличении ВВП страны на 1 млрд. долларов, ИЧР в среднем вырастёт на -0.048
+\item $\varepsilon = 6.2$. При увеличении $x$ на 1\%, $y$ изменится на 6.2\%
+\item $\rho \approx -0.8$, $\rho_{exact} = -0.8$. Отрицательная сильная линейная связь
+\item Положительная умеренная (средняя) линейная. $\symit{\rho_{exact} = 0.5763}$
+\end{enumerate}
+
+\textbf{Вариант 20}
+\begin{enumerate}
+\item $y = 70.5+-0.125\cdot x$. Каждая дополнительная выкуренная сигарета изменяет среднее количество лет, которое человек проживёт на -0.125
+\item $S = 6.86$
+\item $\varepsilon = 0.4$. При увеличении цены маркера на 1\%, срок его службы вырастет на 0.4\%
+\item $\rho \approx -0.2$, $\rho_{exact} = -0.199$. Отрицательная слабая линейная связь
+\item Лаборант был неправ. Коэффициент корреляции говорит о наличии или отсутствии лишь \textit{линейной} взаимосвязи. $y = cos(x)$
+\end{enumerate}
+
+\end{document}
